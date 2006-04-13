@@ -9,6 +9,7 @@ function moduleFunctions( $moduleName )
     {
         $functions =& $mod->attribute( 'available_functions' );
         $functionNames = array_keys( $functions );
+        sort( $functionNames );
     }
     else
     {
