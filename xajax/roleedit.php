@@ -21,13 +21,11 @@ function moduleFunctions( $moduleName )
     // set value of hidden input field so we can go straight trough all wizard steps
     $objResponse->addAssign('CurrentModule', 'value', $moduleName );
 
-    $objResponse->addScript( 'removeAllOptions( \'ModuleFunction\' );' );
-
-    //$objResponse->addAlert( implode( ', ', $functionNames ) );
+    $objResponse->addScriptCall( 'removeAllOptions', 'ModuleFunction' );
 
     foreach( $functionNames as $functionName )
     {
-        $objResponse->addScript( "addOption( 'ModuleFunction', '" . $functionName . "', '" . $functionName . "' );" );
+        $objResponse->addScriptCall( 'addOption', 'ModuleFunction', $functionName, $functionName );
     }
 
     if ( count( $functionNames ) > 0 )
