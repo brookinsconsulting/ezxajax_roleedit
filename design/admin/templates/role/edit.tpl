@@ -39,9 +39,7 @@
 <div class="element">
     <label>{'Function'|i18n( 'design/admin/role/createpolicystep2' )}:</label>
     <select name="ModuleFunction" id="ModuleFunction">
-    {section name=Functions loop=$functions}
-    <option value="{$Functions:item}">{$Functions:item}</option>
-    {/section}
+
     </select>
 </div>
 <div class="break"></div>
