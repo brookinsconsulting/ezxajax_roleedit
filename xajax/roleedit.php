@@ -19,33 +19,33 @@ function moduleFunctions( $moduleName )
     $objResponse = new xajaxResponse();
 
     // set value of hidden input field so we can go straight trough all wizard steps
-    $objResponse->addAssign('CurrentModule', 'value', $moduleName );
+    $objResponse->assign('CurrentModule', 'value', $moduleName );
 
-    $objResponse->addScriptCall( 'removeAllOptions', 'ModuleFunction' );
+    $objResponse->call( 'removeAllOptions', 'ModuleFunction' );
 
     foreach( $functionNames as $functionName )
     {
-        $objResponse->addScriptCall( 'addOption', 'ModuleFunction', $functionName, $functionName );
+        $objResponse->call( 'addOption', 'ModuleFunction', $functionName, $functionName );
     }
 
     if ( count( $functionNames ) > 0 )
     {
-        $objResponse->addAssign( 'AddFunction', 'disabled', false );
-        $objResponse->addAssign( 'AddFunction', 'className', 'button' );
+        $objResponse->assign( 'AddFunction', 'disabled', false );
+        $objResponse->assign( 'AddFunction', 'className', 'button' );
 
-        $objResponse->addAssign( 'Limitation', 'disabled', false );
-        $objResponse->addAssign( 'Limitation', 'className', 'button' );
+        $objResponse->assign( 'Limitation', 'disabled', false );
+        $objResponse->assign( 'Limitation', 'className', 'button' );
     }
     else
     {
-        $objResponse->addAssign( 'AddFunction', 'disabled', true );
-        $objResponse->addAssign( 'AddFunction', 'className', 'button-disabled' );
+        $objResponse->assign( 'AddFunction', 'disabled', true );
+        $objResponse->assign( 'AddFunction', 'className', 'button-disabled' );
 
-        $objResponse->addAssign( 'Limitation', 'disabled', true );
-        $objResponse->addAssign( 'Limitation', 'className', 'button-disabled' );
+        $objResponse->assign( 'Limitation', 'disabled', true );
+        $objResponse->assign( 'Limitation', 'className', 'button-disabled' );
     }
 
-    return $objResponse->getXML();
+    return $objResponse;
 }
 
 ?>
