@@ -1,7 +1,7 @@
 <?php /*
 
 [ExtensionSettings]
-ExtensionDirectories[]=xajax_roleedit
+ExtensionDirectories[]=ezxajax_roleedit
 
 AvailableFunctions[moduleFunctions]=roleedit
 

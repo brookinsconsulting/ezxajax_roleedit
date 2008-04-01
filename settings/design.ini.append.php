@@ -1,7 +1,7 @@
 <?php /*
 
 [ExtensionSettings]
-DesignExtensions[]=xajax_roleedit
+DesignExtensions[]=ezxajax_roleedit
 
 [JavaScriptSettings]
 JavaScriptList[]=xajax_roleedit.js

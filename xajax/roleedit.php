@@ -3,11 +3,11 @@
 function moduleFunctions( $moduleName )
 {
     include_once( 'lib/ezutils/classes/ezmodule.php' );
-    $mod = & eZModule::exists( $moduleName );
+    $mod = eZModule::exists( $moduleName );
 
     if ( $mod )
     {
-        $functions =& $mod->attribute( 'available_functions' );
+        $functions = $mod->attribute( 'available_functions' );
         $functionNames = array_keys( $functions );
         sort( $functionNames );
     }
