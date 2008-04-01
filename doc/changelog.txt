@@ -2,7 +2,7 @@
 0.1
 - initial public release
 
-0.2
+2.0.0
 - renameing to ezxajax_roleedit
 - update for use in ez4 / remove php5 strict warnings
 - adding ezinfo.php

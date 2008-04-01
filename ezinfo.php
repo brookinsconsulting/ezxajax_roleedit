@@ -5,7 +5,7 @@ class ezxajax_roleeditInfo
     {
         return array(
             'Name' => "<a href='http://projects.ez.no/ezxajax_roleedit'>ezxajax_roleedit</a>",
-            'Version' => "0.2",
+            'Version' => "2.0.0",
             'Copyright' => "Copyright (C) 2006 SCK-CEN",
             'Author' => "Kristof Coomans",
             'License' => "GNU General Public License",
